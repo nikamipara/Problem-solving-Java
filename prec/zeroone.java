@@ -15,15 +15,12 @@ class zeroone {
 	}
 	public static void main(String args[]) throws Exception {
 		/* Enter your code here. Read input from STDIN. Print output to STDOUT */
-
 		Scanner sc = new Scanner(System.in);
 		int N = sc.nextInt();
 		// k = sc.nextInt();
 		for (int i = 1; i < 10000; i++)
 			calculate(i);
-
 	}
-
 	private static void calculate(int n) {
 		BigInteger ans = new BigInteger("0");
 		HashMap<Integer, BigInteger> a = new HashMap<Integer, BigInteger>();
@@ -64,8 +61,6 @@ class zeroone {
 								temp.put(newr, b);
 							}
 						}
-						// it.remove(); // avoids a
-						// ConcurrentModificationException
 					}
 					a.putAll(temp);
 					a.put(reminder, new BigInteger(pow(power)));
